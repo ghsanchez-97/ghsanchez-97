@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Importación de los estilos de los componentes */
+@import './components/index.css';
+
+/* Importación de los estilos de las vista */
+@import './View/index.css';
+
 *{
   box-sizing:border-box;
   margin:0;
