@@ -1,15 +1,19 @@
 h1{
-    font-size: 1.6rem;
+    @apply text-2xl;
 }
-.row_nav{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
+.navbar-header{
+    @apply flex justify-between items-center px-8;
 }
-.drawer{
-    margin: 1.7rem;
+.navbar-img img{
+    @apply w-2/4 py-4;
 }
-.img img{
-    width: 50%;
-    margin: 1.7rem;
+/* Estilo en el drawer*/
+.navbar__drawer--button{
+    @apply text-5xl;
+}
+.drawer__content{
+    @apply w-screen
+}
+.drawer-content__title{
+    @apply text-center pt-3 text-4xl font-bold
 }

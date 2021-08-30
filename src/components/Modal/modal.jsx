@@ -3,7 +3,7 @@ import "./modal.css";
 import { MdClose } from "react-icons/md";
 import { useSpring, animated } from "react-spring";
 
-const Modal = ({ children, isModal, className, isClose }) => {
+const Modal = ({ children, isModal, className = "", isClose }) => {
   const modalRef = React.useRef();
 
   const animation = useSpring({
@@ -38,11 +38,11 @@ const Modal = ({ children, isModal, className, isClose }) => {
       {isModal ? (
         <div className='modal__container' onClick={closeModal} ref={modalRef}>
           <animated.div style={animation}> 
-            <div className={`modal__content ${className}`}> 
+            <div className={`modal__content`}> 
               <button onClick={() => isClose(prev => !prev)} aria-label='Close Modal' className='modal__close'>
                 <MdClose />
               </button>
-              <div className='modal__main'>{children}</div>
+              <div className={`modal__main ${className}`}>{children}</div>
             </div>
           </animated.div>
         </div>

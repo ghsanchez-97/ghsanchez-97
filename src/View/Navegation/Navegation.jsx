@@ -21,7 +21,11 @@ const Navegation = () => {
                 <div className="navbar-drawer">
                     <button onClick={openModal} className='navbar__drawer--button'><MdMenu/></button>
                     <Drawer isModal={showModal} isClose={setShowModal}>
-                        <h1>Menu</h1>
+                        <div className="drawer__content">
+                            <div className="drawer-content__title">
+                                <h1>Menu</h1>
+                            </div>
+                        </div>
                     </Drawer>
                 </div>
             </div>
