@@ -1,0 +1,7 @@
+.drawer{
+    @apply bg-white flex w-vw-2 h-screen ;
+}
+.modal__main{
+    @apply absolute;
+    left: 80vw;
+}

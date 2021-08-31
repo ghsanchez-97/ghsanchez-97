@@ -1,1 +1,7 @@
-
+.containers{
+    @apply bg-secondary;
+}
+.rows{
+    background-image: url('assets/Fondo/network.jpg');
+    @apply bg-cover bg-no-repeat w-full h-screen bg-center;
+}

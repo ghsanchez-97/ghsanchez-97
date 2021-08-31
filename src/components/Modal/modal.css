@@ -1,0 +1,8 @@
+/*Estilos del modal*/
+.modal__container {
+    @apply fixed inset-0 overflow-hidden flex bg-black bg-opacity-50;
+}
+
+.modal__close {
+    @apply cursor-pointer absolute top-5 left-5 w-8 h-8 p-0 z-10 text-white text-7xl
+}
