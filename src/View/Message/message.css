@@ -1,0 +1,6 @@
+.message__container{
+    @apply flex justify-center items-center w-1/2 mx-auto my-1/1 p-3;
+}
+.message__container--text h1{
+    @apply text-center text-white text-6xl uppercase;
+}

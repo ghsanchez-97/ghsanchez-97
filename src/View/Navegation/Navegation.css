@@ -9,11 +9,15 @@ h1{
 }
 /* Estilo en el drawer*/
 .navbar__drawer--button{
-    @apply text-5xl;
+    @apply text-8xl;
 }
 .drawer__content{
-    @apply w-screen
+    @apply w-screen;
 }
 .drawer-content__title{
-    @apply text-center pt-3 text-4xl font-bold
+    @apply text-center pt-3 text-4xl font-bold;
+}
+/*Color icon*/
+.drawer--icon{
+    @apply text-primary
 }

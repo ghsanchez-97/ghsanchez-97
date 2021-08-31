@@ -8,6 +8,9 @@
 /* Importación de los estilos de las vista */
 @import './View/index.css';
 
+/*importación de los estilo de app*/
+@import './styles/App.css';
+
 *{
   box-sizing:border-box;
   margin:0;

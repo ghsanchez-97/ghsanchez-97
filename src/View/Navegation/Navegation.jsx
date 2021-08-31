@@ -4,7 +4,7 @@ import logo from 'assets/img/LogoGhsh.svg';
 import Drawer from 'components/Drawer/Drawer';
 import { MdMenu } from 'react-icons/md';
 
-const Navegation = () => {
+const Navegation = ({className=''}) => {
 
     const [showModal, setShowModal] = React.useState(false);
 
@@ -18,8 +18,8 @@ const Navegation = () => {
                 <div className="navbar-img">
                     <img src={logo} alt="Logo Personal"/>
                 </div>
-                <div className="navbar-drawer">
-                    <button onClick={openModal} className='navbar__drawer--button'><MdMenu/></button>
+                <div className={`navbar-drawer ${className}`}>
+                    <button onClick={openModal} className='navbar__drawer--button'><MdMenu className='drawer--icon'/></button>
                     <Drawer isModal={showModal} isClose={setShowModal}>
                         <div className="drawer__content">
                             <div className="drawer-content__title">
