@@ -3,29 +3,28 @@ import "./modal.css";
 import { MdClose } from "react-icons/md";
 import { useSpring, animated } from "react-spring";
 
-const Modal = ({ children, isModal, className = "", isClose }) => {
+export const Modal = ({ children, isOpen, className = "", onClose }) => {
   const modalRef = React.useRef();
 
   const animation = useSpring({
     config: { duration: 250 },
-    opacity: isModal ? 1 : 0,
-    transform: isModal ? "translateY(0)" : "translateY(-100%)",
+    opacity: isOpen ? 1 : 0,
+    transform: isOpen ? "translateY(0)" : "translateY(-100%)",
   });
 
   const closeModal = (e) => {
     if (modalRef.current === e.target) {
-      isClose(false);
+      onClose(false);
     }
   };
 
   const keyPress = React.useCallback(
     (e) => {
-      if (e.key === "Escape" && isModal) {
-        isClose(false);
-        console.log("I pressed");
+      if(e.keyCode === 27 && e.key === 'Escape' && isOpen) {
+        onClose(false);
       }
     },
-    [isModal, isClose]
+    [isOpen, onClose]
   );
 
   React.useEffect(() => {
@@ -35,11 +34,11 @@ const Modal = ({ children, isModal, className = "", isClose }) => {
 
   return (
     <React.Fragment>
-      {isModal ? (
+      {isOpen ? (
         <div className='modal__container' onClick={closeModal} ref={modalRef}>
           <animated.div style={animation}> 
             <div className={`modal__content`}> 
-              <button onClick={() => isClose(prev => !prev)} aria-label='Close Modal' className='modal__close'>
+              <button onClick={() => onClose(prev => !prev)} aria-label='Close Modal' className='modal__close'>
                 <MdClose />
               </button>
               <div className={`modal__main ${className}`}>{children}</div>
@@ -50,4 +49,3 @@ const Modal = ({ children, isModal, className = "", isClose }) => {
     </React.Fragment>
   )
 };
-export default Modal;
