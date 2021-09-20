@@ -1,7 +1,8 @@
 import React from 'react';
 import './Navegation.css';
 import logo from 'assets/img/LogoGhsh.svg';
-import Drawer from 'components/Drawer/Drawer';
+//import Drawer from 'components/Drawer/Drawer';
+import Modal from 'components/Modal/modal';
 import { MdMenu } from 'react-icons/md';
 
 const Navegation = ({className=''}) => {
@@ -20,13 +21,13 @@ const Navegation = ({className=''}) => {
                 </div>
                 <div className={`navbar-drawer ${className}`}>
                     <button onClick={openModal} className='navbar__drawer--button'><MdMenu className='drawer--icon'/></button>
-                    <Drawer isModal={showModal} isClose={setShowModal}>
+                    <Modal isOpen={showModal} onClose={setShowModal}>
                         <div className="drawer__content">
                             <div className="drawer-content__title">
                                 <h1>Menu</h1>
                             </div>
                         </div>
-                    </Drawer>
+                    </Modal>
                 </div>
             </div>
         </React.Fragment>

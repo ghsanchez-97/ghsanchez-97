@@ -3,7 +3,7 @@ import "./modal.css";
 import { MdClose } from "react-icons/md";
 import { useSpring, animated } from "react-spring";
 
-export const Modal = ({ children, isOpen, className = "", onClose }) => {
+const Modal = ({ children, isOpen, className = "", onClose }) => {
   const modalRef = React.useRef();
 
   const animation = useSpring({
@@ -49,3 +49,4 @@ export const Modal = ({ children, isOpen, className = "", onClose }) => {
     </React.Fragment>
   )
 };
+export default Modal;
