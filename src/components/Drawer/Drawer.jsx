@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal } from 'components/Modal/modal';
+import Modal from '../Modal/modal';
 import './Drawer.css'
 
 const Drawer = ({children, className = "", isModal, isClose,}) => {
