@@ -9,8 +9,7 @@ const Navegation = ({className=''}) => {
     const [showModal, setShowModal] = React.useState(false);
 
     const openModal = () => {
-        setShowModal(prev => !prev);
-        console.log('openModal', setShowModal);
+        setShowModal((prev) => !prev);
     }
 
     return(
@@ -21,7 +20,7 @@ const Navegation = ({className=''}) => {
                 </div>
                 <div className={`navbar-drawer ${className}`}>
                     <button onClick={openModal} className='navbar__drawer--button'><MdMenu className='drawer--icon'/></button>
-                    <Drawer isModal={showModal} isClose={setShowModal}>
+                    <Drawer isModal={showModal} onClose={setShowModal}>
                         <div className="drawer__content">
                             <div className="drawer-content__title">
                                 <h1>Menu</h1>
