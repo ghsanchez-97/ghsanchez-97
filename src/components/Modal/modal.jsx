@@ -13,14 +13,15 @@ const Modal = ({ children, isOpen, className = "", onClose }) => {
   });
 
   const closeModal = (e) => {
-    if (modalRef.current === e.target) {
+    if (modalRef?.current === e?.target) {
       onClose(false);
+      console.log("close");
     }
   };
 
   const keyPress = React.useCallback(
     (e) => {
-      if(e.keyCode === 27 && e.key === 'Escape' && isOpen) {
+      if(e?.key === 27 && e?.key === 'Escape' && isOpen) {
         onClose(false);
       }
     },
@@ -28,8 +29,8 @@ const Modal = ({ children, isOpen, className = "", onClose }) => {
   );
 
   React.useEffect(() => {
-    document.addEventListener("keydown", keyPress);
-    return () => document.removeEventListener("keydown", keyPress);
+    document?.addEventListener("keydown", keyPress);
+    return () => document?.removeEventListener("keydown", keyPress);
   }, [keyPress]);
 
   return (

@@ -10,6 +10,7 @@ const Navegation = ({className=''}) => {
 
     const openModal = () => {
         setShowModal(prev => !prev);
+        console.log('openModal', setShowModal);
     }
 
     return(
