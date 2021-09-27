@@ -10,6 +10,7 @@ const Navegation = ({className=''}) => {
 
     const openModal = () => {
         setShowModal((prev) => !prev);
+        console.log('openModal', showModal);
     }
 
     return(
@@ -19,7 +20,7 @@ const Navegation = ({className=''}) => {
                     <img src={logo} alt="Logo Personal"/>
                 </div>
                 <div className={`navbar-drawer ${className}`}>
-                    <button onClick={openModal} className='navbar__drawer--button'><MdMenu className='drawer--icon'/></button>
+                    <button onClick={() => openModal} className='navbar__drawer--button'><MdMenu className='drawer--icon'/></button>
                     <Drawer isModal={showModal} onClose={setShowModal}>
                         <div className="drawer__content">
                             <div className="drawer-content__title">
