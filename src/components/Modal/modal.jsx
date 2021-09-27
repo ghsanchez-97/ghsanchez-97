@@ -1,17 +1,9 @@
 import React from "react";
 import "./modal.css";
 import { MdClose } from "react-icons/md";
-// import { useSpring, animated } from "react-spring";
 
 const Modal = ({ children, isOpen, className = "", onClose }) => {
   const modalRef = React.useRef();
-
-  // const animation = useSpring({
-  //   config: { duration: 250 },
-  //   opacity: isOpen ? 1 : 0,
-  //   transform: isOpen ? "translateY(0)" : "translateY(-100%)",
-  // });
-
   const closeModal = (e) => {
     if (modalRef?.current === e?.target) {
       onClose(false);
@@ -21,7 +13,7 @@ const Modal = ({ children, isOpen, className = "", onClose }) => {
 
   const keyPress = React.useCallback(
     (e) => {
-      if(e?.key === 27 && e?.key === 'Escape' && isOpen) {
+      if(e?.keyCode === 27 && e?.key === 'Escape' && isOpen) {
         onClose(false);
       }
     },
