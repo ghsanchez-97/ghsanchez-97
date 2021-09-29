@@ -1,0 +1,6 @@
+.about__container{
+    @apply flex justify-center items-center mt-8 pb-4;
+}
+.about__container--title h1{
+    @apply text-center text-4xl font-bold text-white;
+}

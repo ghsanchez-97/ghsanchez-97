@@ -1,5 +1,8 @@
 /*importación de los estilos de navegación*/
 @import './Navegation/Navegation.css';
 
-/*Importación de loss estilos de messages*/
+/*Importación de los estilos de messages*/
 @import './Message/message.css';
+
+/*Importación de los estilos de about*/
+@import './About/about.css';
