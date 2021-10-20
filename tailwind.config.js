@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         'primary': '#FF0909',
         'secondary': '#32453E',
+        'tercer': '#F16529'
       },
       margin: {
         '1/1': '20%',

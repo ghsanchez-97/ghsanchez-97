@@ -5,11 +5,6 @@ import Message from "View/Message/message";
 import About from "View/About/About";
 
 function App() {
-  const [showModal, setShowModal] = React.useState(false);
-
-  const openModal = () => {
-    setShowModal((prev) => !prev);
-  };
 
   return (
     <React.Fragment>

@@ -1,8 +1,11 @@
 import React from "react";
 import "./modal.css";
 import { MdClose } from "react-icons/md";
+//Hook de disable scroll
+import useLockBodyScroll from "hook/useLockBodyScroll";
 
 const Modal = ({ children, isOpen, className = "", onClose }) => {
+  
   const modalRef = React.useRef();
   const closeModal = (e) => {
     if (modalRef?.current === e?.target) {
@@ -10,7 +13,7 @@ const Modal = ({ children, isOpen, className = "", onClose }) => {
       console.log("close");
     }
   };
-
+  
   const keyPress = React.useCallback(
     (e) => {
       if(e?.keyCode === 27 && e?.key === 'Escape' && isOpen) {
@@ -18,12 +21,14 @@ const Modal = ({ children, isOpen, className = "", onClose }) => {
       }
     },
     [isOpen, onClose]
-  );
-
-  React.useEffect(() => {
-    document?.addEventListener("keydown", keyPress);
-    return () => document?.removeEventListener("keydown", keyPress);
-  }, [keyPress]);
+    );
+    
+    React.useEffect(() => {
+      document?.addEventListener("keydown", keyPress);
+      return () => document?.removeEventListener("keydown", keyPress);
+    }, [keyPress]);
+    
+    useLockBodyScroll(isOpen);
 
   return (
     <React.Fragment>
