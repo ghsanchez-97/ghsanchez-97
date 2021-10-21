@@ -1,5 +1,7 @@
 import React from "react";
 import "./about.css";
+//Imagen
+import Personal from 'assets/Fondo/Personal.jpeg'
 
 const About = () => {
   return (
@@ -21,6 +23,12 @@ const About = () => {
             </p>
             <p>These are some technologies that I have worked on:</p>
           </div>
+          <div className='about__content--img'>
+            <img src={Personal} alt="Guy Sánchez" />
+          </div>
+      </div>
+      <div className=''>
+        <h2>Skills</h2>
       </div>
     </React.Fragment>
   );

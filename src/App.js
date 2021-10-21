@@ -17,7 +17,7 @@ function App() {
             <Message />
           </div>
         </div>
-        <main className="main__container">
+        <main className="main__container mt-8">
           <About />
         </main>
       </div>
