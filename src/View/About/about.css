@@ -14,14 +14,27 @@
   @apply text-tercer text-5xl text-justify;
   line-height: 4.5rem;
 }
-.about__content--img{
-    @apply flex justify-center;
+.about__content--img {
+  @apply flex justify-center;
 }
-.about__content--img img{
-    @apply filter grayscale;
-    transition: all 1s;
+.about__content--img img {
+  transition: all 1s;
 }
-.about__content--img img:hover{
-    @apply filter-none;
-    border-radius: 50%;
+.about__content--img img:hover {
+  border-radius: 50%;
+}
+.about__skillls {
+  @apply grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 35px;
+}
+.about__skills--content {
+  @apply flex justify-between items-center mx-auto mb-20;
+  gap: 70px;
+  width: 60%;
+}
+.about__skills--content-sc {
+  @apply flex justify-between items-center mx-auto mb-20;
+  gap: 70px;
+  width: 60%;
 }

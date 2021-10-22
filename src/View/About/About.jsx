@@ -2,6 +2,12 @@ import React from "react";
 import "./about.css";
 //Imagen
 import Personal from 'assets/Fondo/Personal.jpeg'
+import html5 from 'assets/img/html-5.svg'
+import css3 from 'assets/img/css-3.svg'
+import js from 'assets/img/javascript.svg'
+import angular from 'assets/img/angular-icon.svg'
+import nodejs from 'assets/img/nodejs-icon.svg'
+import react from 'assets/img/react.svg'
 
 const About = () => {
   return (
@@ -27,8 +33,22 @@ const About = () => {
             <img src={Personal} alt="Guy Sánchez" />
           </div>
       </div>
-      <div className=''>
-        <h2>Skills</h2>
+      <div className='about__skills'>
+        <div className='about__skills--content'>
+          <img src={html5} alt="HTML5" className='w-1/5' />
+          <img src={css3} alt="CSS3" className='w-1/5' />
+          <img src={js} alt="JAVASCRIPT" className='w-1/5' />
+        </div>
+        <div className='about__skills--content-sc'>
+          <img src={angular} alt="ANGULAR" className='w-1/5' />
+          <img src={nodejs} alt="NODEJS" className='w-1/5' />
+          <img src={react} alt="REACT" className='w-1/5' />
+        </div>
+      </div>
+      <div className='about__more'>
+        <button>
+          View More
+        </button>
       </div>
     </React.Fragment>
   );
