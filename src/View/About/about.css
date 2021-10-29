@@ -38,3 +38,28 @@
   gap: 70px;
   width: 60%;
 }
+.about__more{
+  @apply flex justify-center m-8;
+}
+.about__more button{
+  @apply p-4 bg-tercer text-white font-bold uppercase rounded-2xl text-4xl;
+  font-family: "NovaRound", serif;
+}
+/*Modal styled*/
+.more__modal{
+  @apply bg-secondary absolute top-1/4;
+  width: 50vw;
+  height: 53vh;
+  left: 27%;
+}
+.modal__container--more h1{
+  @apply flex justify-center p-4 text-5xl uppercase text-tercer;
+  font-family: "NovaRound", serif;
+}
+.modal__content--it{
+  @apply grid gap-5;
+  grid-template-rows: 1fr 1fr;
+}
+.modal__content--it--img1, .modal__content--it--img2{
+  @apply flex justify-around;
+}
