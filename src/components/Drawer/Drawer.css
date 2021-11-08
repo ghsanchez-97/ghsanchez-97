@@ -1,7 +1,7 @@
-.drawer{
-    @apply bg-white flex w-vw-2 h-screen ;
+.drawer {
+  @apply bg-white flex w-vw-2 h-screen;
 }
-.drawer__main{
-    @apply absolute;
-    left: 80vw;
+.drawer__main {
+  @apply absolute;
+  left: 80vw;
 }

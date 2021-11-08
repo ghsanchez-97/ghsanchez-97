@@ -1,0 +1,31 @@
+.worked__main--title{
+    @apply flex justify-center;
+}
+.worked__main--title h1{
+    @apply text-7xl font-bold text-white;
+}
+.worked__container{
+    @apply grid my-4;
+    grid-template-columns: 1fr 1fr;
+}
+.worked__content-header{
+    @apply flex flex-col items-center gap-5;
+}
+.worked__content-header button{
+    @apply text-7xl text-white;
+}
+.worked__content-header button:hover{
+    @apply cursor-pointer border-b-2 border-tercer;
+}
+.worked__body--title{
+    @apply flex flex-col gap-5;
+}
+.worked__body--title h1{
+    @apply text-7xl text-center text-blue-500 mt-5;
+}
+.worked__body--title span{
+    @apply text-tercer;
+}
+.worked__body--title p{
+    @apply text-4xl text-white px-5 text-justify;
+}

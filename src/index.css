@@ -11,12 +11,12 @@
 /*importación de los estilo de app*/
 @import './styles/App.css';
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-html{
+html {
   font-size: 62.5%;
   @apply bg-secondary;
 }

@@ -6,3 +6,6 @@
 
 /*Importación de los estilos de about*/
 @import './About/about.css';
+
+/*Importación de los estilos de worked*/
+@import './Worked/worked.css';

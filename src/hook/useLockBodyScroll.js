@@ -1,9 +1,9 @@
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 
-const useLockBodyScroll = ( isOpen ) => {
+const useLockBodyScroll = (isOpen) => {
   useEffect(() => {
-    document.body.style.overflow = isOpen ? 'hidden' : 'visible';
-    return () => (document.body.style.overflow = 'visible');
-  }, [isOpen]);
+    document.body.style.overflow = isOpen ? 'hidden' : 'visible'
+    return () => (document.body.style.overflow = 'visible')
+  }, [isOpen])
 }
-export default useLockBodyScroll;
+export default useLockBodyScroll
