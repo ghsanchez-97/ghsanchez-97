@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "Company": "Epitech",
+        "Position": "Frontend Developer",
+        "Date": "Sept-2021 to Oct-2021",
+        "Assignment": "I was working on the part of maintaining the systems that I was collaborating with"
+    },
+    {
+        "id": "2",
+        "Company": "AlySystem",
+        "Position": "Frontend Developer",
+        "Date": "May-2021 to Ago-2021",
+        "Assignment": "This company was dedicated to cryptos-currencies, I was in charge of the back office to give ,it maintenance, improvements in terms of functionality"
+    },
+    {
+        "id": "3",
+        "Company": "Inatec",
+        "Position": "Technical teacher",
+        "Date": "Abr-2020 to Dic-2020",
+        "Assignment": "I taught classes that dealt with computing, office automation, installation and maintenance on computers, installation and configuration on both windows serve and linux server, router and switch configuration in simulation"
+    }
+]
