@@ -29,3 +29,6 @@
 .worked__body--title p{
     @apply text-4xl text-white px-5 text-justify;
 }
+.worked__body--title h2{
+    @apply text-4xl text-center text-white my-2;
+}
